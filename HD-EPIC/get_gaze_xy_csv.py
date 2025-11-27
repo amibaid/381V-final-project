@@ -4,10 +4,17 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import sys
+import subprocess
 
 from projectaria_tools.core import data_provider, mps
 from projectaria_tools.core.stream_id import StreamId
 from projectaria_tools.core.mps.utils import get_gaze_vector_reprojection
+
+"""
+Usage ex:
+python3 get_gaze_xy_csv.py --root /Users/amibaid/Downloads/381V_final/hd-epic-downloader/data/HD-EPIC --participant P02 --recording all
+"""
 
 
 def parse_args():
@@ -26,14 +33,68 @@ def main():
     participant = args.participant
     rec = args.recording
 
+    if rec == "all":
+        videos_dir = root / "Videos" / participant
+        pattern = f"{participant}-*_mp4_to_vrs_time_ns.csv"
+
+        for csv_path in sorted(videos_dir.glob(pattern)):
+            stem = csv_path.stem  # e.g. P01-20240203-184045_mp4_to_vrs_time_ns
+            prefix = f"{participant}-"
+            suffix = "_mp4_to_vrs_time_ns"
+            if not (stem.startswith(prefix) and stem.endswith(suffix)):
+                continue
+
+            rec_id = stem[len(prefix):-len(suffix)]
+            print(f"\n=== Running gaze export for {participant}-{rec_id} ===")
+
+            cmd = [
+                sys.executable,
+                __file__,
+                "--root", str(root),
+                "--participant", participant,
+                "--recording", rec_id,
+            ]
+            if args.use_personalized_gaze:
+                cmd.append("--use_personalized_gaze")
+
+            try:
+                subprocess.run(cmd, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"[WARN] Failed on {participant}-{rec_id}: {e}")
+
+        return  # don't run the single-recording code below
+
+    
+    # single recording 
+
     # Paths
     videos_dir = root / "Videos" / participant
-    mp4_path = videos_dir / f"{participant}-{rec}.mp4"
+    # mp4_path = videos_dir / f"{participant}-{rec}.mp4"
     mapping_csv = videos_dir / f"{participant}-{rec}_mp4_to_vrs_time_ns.csv"
 
     vrs_path = (
         root / "VRS" / participant / f"{participant}-{rec}_anonymized.vrs"
     )
+
+    completed_log = Path("/Users/amibaid/Downloads/381V_final/hd-epic-downloader/data/completed_downloads.txt")
+    if completed_log.exists():
+        completed = {
+            line.strip()
+            for line in completed_log.read_text().splitlines()
+            if line.strip()
+        }
+        vrs_filename = vrs_path.name
+        if vrs_filename not in completed:
+            raise RuntimeError(
+                f"VRS file {vrs_filename} is not listed in {completed_log}. "
+                "Assuming incomplete download; aborting."
+            )
+    else:
+        print(
+            "[WARN] completed_downloads.txt not found; "
+            "skipping VRS completeness check."
+        )
+
     mps_root = (
         root
         / "SLAM-and-Gaze"
@@ -42,8 +103,8 @@ def main():
         / f"mps_{participant}-{rec}_vrs"
     )
 
-    if not mp4_path.exists():
-        raise FileNotFoundError(f"MP4 not found: {mp4_path}")
+    # if not mp4_path.exists():
+    #     raise FileNotFoundError(f"MP4 not found: {mp4_path}")
     if not mapping_csv.exists():
         raise FileNotFoundError(f"Mapping CSV not found: {mapping_csv}")
     if not vrs_path.exists():
@@ -175,7 +236,7 @@ def main():
     # -------------------------------------------------
     # 6) Save results: one gaze point per MP4 frame
     # -------------------------------------------------
-    out_csv = videos_dir / f"{participant}-{rec}_gaze_xy_in_mp4.csv"
+    out_csv = root / "xy_gaze" / f"{participant}-{rec}_gaze_xy_in_mp4.csv"
     out_df = pd.DataFrame(
         {
             "frame_idx": np.arange(num_frames, dtype=int),
