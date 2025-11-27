@@ -1,6 +1,6 @@
 TODOs
-- [ ] Set up QWEN video inference
-- [ ] Test HD epic download + gaze data
+- [X] Set up QWEN video inference
+- [X] Test HD epic download + gaze data
 - [ ] Download eval data
 - [ ] Download train data (P 2-9)
 - [ ] Script to crop videos into necessary segments per question
