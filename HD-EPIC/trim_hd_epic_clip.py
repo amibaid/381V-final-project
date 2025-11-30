@@ -4,21 +4,28 @@ import re
 import subprocess
 from pathlib import Path
 
+"""
+python trim_hd_epic_clip.py \
+  --agg_json "/content/drive/MyDrive/381V-final-project/HD-EPIC/test_vqa.json" \
+  --hd_epic_root "/content/eval_data" \
+  --out_dir "/content/drive/MyDrive/381V final project/eval data/trimmed_clips"
+"""
+
 
 def load_questions(json_path: Path) -> dict:
     with json_path.open("r") as f:
         return json.load(f)
 
 
-def find_qa_entry(data: dict, src_file: str, q_key: str) -> dict:
-    """
-    Find the question entry in data["questions"] matching given src_file and q_key.
-    Returns the whole entry (with keys: src_file, q_key, q_data).
-    """
-    for entry in data["questions"]:
-        if entry.get("src_file") == src_file and entry.get("q_key") == q_key:
-            return entry
-    raise ValueError(f"No entry found for src_file={src_file}, q_key={q_key}")
+# def find_qa_entry(data: dict, src_file: str, q_key: str) -> dict:
+#     """
+#     Find the question entry in data["questions"] matching given src_file and q_key.
+#     Returns the whole entry (with keys: src_file, q_key, q_data).
+#     """
+#     for entry in data["questions"]:
+#         if entry.get("src_file") == src_file and entry.get("q_key") == q_key:
+#             return entry
+#     raise ValueError(f"No entry found for src_file={src_file}, q_key={q_key}")
 
 
 def get_video_path_from_qdata(
@@ -28,7 +35,7 @@ def get_video_path_from_qdata(
     Given the question entry, derive the path to the corresponding .mp4 video.
 
     Assumes layout:
-        hd_epic_root / "Videos" / <participant> / <video_id>.mp4
+        hd_epic_root / <participant> / <video_id>.mp4
     where video_id looks like "P01-20240202-110250".
     """
     inputs = q_entry["q_data"]["inputs"]
@@ -37,7 +44,7 @@ def get_video_path_from_qdata(
     video_id = vid_meta["id"]          # e.g., "P01-20240202-110250"
     participant = video_id.split("-")[0]  # e.g., "P01"
 
-    video_path = hd_epic_root / "Videos" / participant / f"{video_id}.mp4"
+    video_path = hd_epic_root / participant / f"{video_id}.mp4"
     if not video_path.is_file():
         raise FileNotFoundError(f"Video file not found at {video_path}")
     return video_path
@@ -110,12 +117,6 @@ def main():
         help="Path to HD-EPIC root (e.g. /content/data/HD-EPIC).",
     )
     parser.add_argument(
-        "--src_file", type=str, required=True, help="src_file to match."
-    )
-    parser.add_argument(
-        "--q_key", type=str, required=True, help="q_key to match."
-    )
-    parser.add_argument(
         "--out_dir",
         type=str,
         required=True,
@@ -141,31 +142,47 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     data = load_questions(agg_json_path)
-    q_entry = find_qa_entry(data, args.src_file, args.q_key)
+    questions = data.get("questions", [])
 
-    video_path = get_video_path_from_qdata(hd_epic_root, q_entry)
-    start_time, end_time = get_clip_window_from_inputs(q_entry)
+    print(f"Found {len(questions)} questions in {agg_json_path}")
 
-    # Build output filename: prefix_src_qkey_start_end.mp4 (sanitized)
-    safe_q_key = args.q_key.replace("/", "_")
-    safe_src = args.src_file.replace(".json", "")
-    output_name = (
-        f"{args.prefix}_{safe_src}_{safe_q_key}_"
-        f"{start_time.replace(':', '-')}_{end_time.replace(':', '-')}.mp4"
-    )
-    output_path = out_dir / output_name
+    num_processed = 0
+    num_failed = 0
 
-    print(f"Trimming {video_path}")
-    print(f"Segment: {start_time} -> {end_time}")
-    print(f"Saving to: {output_path}")
+    for q_entry in questions:
+        src_file = q_entry.get("src_file", "")
+        q_key = q_entry.get("q_key", "")
 
-    trim_video_ffmpeg(
-        input_video=video_path,
-        start_time=start_time,
-        end_time=end_time,
-        output_video=output_path,
-        reencode=args.reencode,
-    )
+        try:
+            video_path = get_video_path_from_qdata(hd_epic_root, q_entry)
+            start_time, end_time = get_clip_window_from_inputs(q_entry)
+
+            # Build output filename: prefix_src_qkey_start_end.mp4 (sanitized)
+            safe_q_key = q_key.replace("/", "_")
+            output_name = f"{safe_q_key}.mp4"
+            output_path = out_dir / output_name
+
+            print(f"\nTrimming {video_path}")
+            print(f"  src_file: {src_file}")
+            print(f"  q_key:    {q_key}")
+            print(f"  Segment:  {start_time} -> {end_time}")
+            print(f"  Saving to: {output_path}")
+
+            trim_video_ffmpeg(
+                input_video=video_path,
+                start_time=start_time,
+                end_time=end_time,
+                output_video=output_path,
+                reencode=args.reencode,
+            )
+            num_processed += 1
+
+        except Exception as e:
+            print(f"!!! Failed for src_file={src_file}, q_key={q_key}: {e}")
+            num_failed += 1
+            continue
+
+    print(f"\nDone. Processed clips: {num_processed}, failed: {num_failed}")
 
 
 if __name__ == "__main__":
