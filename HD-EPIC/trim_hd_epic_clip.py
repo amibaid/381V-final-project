@@ -148,6 +148,7 @@ def main():
 
     num_processed = 0
     num_failed = 0
+    num_skipped = 0
 
     for q_entry in questions:
         src_file = q_entry.get("src_file", "")
@@ -161,6 +162,12 @@ def main():
             safe_q_key = q_key.replace("/", "_")
             output_name = f"{safe_q_key}.mp4"
             output_path = out_dir / output_name
+
+            if output_path.is_file():
+                print(f"\nSkipping src_file={src_file}, q_key={q_key}")
+                print(f"  Output already exists: {output_path}")
+                num_skipped += 1
+                continue
 
             print(f"\nTrimming {video_path}")
             print(f"  src_file: {src_file}")
@@ -182,7 +189,7 @@ def main():
             num_failed += 1
             continue
 
-    print(f"\nDone. Processed clips: {num_processed}, failed: {num_failed}")
+    print(f"\nDone. Processed clips: {num_processed}, skipped: {num_skipped}, failed: {num_failed}")
 
 
 if __name__ == "__main__":
