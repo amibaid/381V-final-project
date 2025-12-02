@@ -1,0 +1,573 @@
+2025-12-02 05:16:05.921887: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-12-02 05:16:05.939830: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1764652565.960812   11276 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1764652565.967581   11276 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1764652565.985953   11276 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764652565.986164   11276 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764652565.986226   11276 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1764652565.986283   11276 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-12-02 05:16:05.991236: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.46s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.35s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.37s/it]
+output_loading_info {'missing_keys': [], 'unexpected_keys': [], 'mismatched_keys': [], 'error_msgs': []}
+{'': 'cuda'}
+CUDA available: True
+First param device: cuda:0
+[INFO] Found 427 existing rows in /content/drive/MyDrive/381V-final-project/qwen_experiments/12_1_baseline/results/qwen3_vl_results_shard_0.csv, will skip them.
+
+Evaluating shard 0/3:   0%|          | 0/868 [00:00<?, ?it/s][INFO] Skipping already-processed question_id: fine_grained_action_localization_6
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_31
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_53
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_66
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_71
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_81
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_87
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_99
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_107
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_114
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_132
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_144
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_181
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_193
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_205
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_217
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_250
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_256
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_263
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_312
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_326
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_332
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_360
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_370
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_403
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_421
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_439
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_460
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_478
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_504
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_520
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_538
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_576
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_590
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_600
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_624
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_642
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_656
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_677
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_695
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_715
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_728
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_753
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_771
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_778
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_810
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_844
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_864
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_883
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_897
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_913
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_936
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_944
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_960
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_973
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_978
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_998
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1009
+[INFO] Processing 174 / 2602 — q_key=fine_grained_action_localization_1025, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:   7%|▋         | 59/868 [00:01<00:14, 57.41it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1025.mp4: [05:16:20] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1025.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1050
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1077
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1095
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1114
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1130
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1157
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1186
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1200
+[INFO] Processing 201 / 2602 — q_key=fine_grained_action_localization_1228, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:   8%|▊         | 68/868 [00:02<00:26, 29.70it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1228.mp4: [05:16:21] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1228.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1240
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1266
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1272
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1283
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1292
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1313
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1328
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1349
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1364
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1375
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1407
+[INFO] Processing 237 / 2602 — q_key=fine_grained_action_localization_1417, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:   9%|▉         | 80/868 [00:03<00:41, 19.15it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1417.mp4: [05:16:22] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1417.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1422
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1438
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1449
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1485
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1493
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1499
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1506
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1518
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1561
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1569
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1577
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1599
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1608
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1644
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1657
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1690
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1708
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1719
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1729
+[INFO] Processing 297 / 2602 — q_key=fine_grained_action_localization_1740, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  12%|█▏        | 100/868 [00:04<00:42, 18.10it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1740.mp4: [05:16:23] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_1740.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1745
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1773
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1792
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1813
+[INFO] Processing 312 / 2602 — q_key=fine_grained_action_localization_1824, video_id=P02-20240211-111822
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Evaluating shard 0/3:  12%|█▏        | 100/868 [00:17<00:42, 18.10it/s]
+Evaluating shard 0/3:  12%|█▏        | 105/868 [00:18<04:57,  2.57it/s][INFO] Loaded frames for fine_grained_action_localization_1824 in 3.11s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1835
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1863
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1885
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1895
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1907
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1930
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1941
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1961
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_1974
+[INFO] Processing 342 / 2602 — q_key=fine_grained_action_localization_1994, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  13%|█▎        | 115/868 [00:33<08:14,  1.52it/s][INFO] Loaded frames for fine_grained_action_localization_1994 in 4.00s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2004
+[INFO] Processing 348 / 2602 — q_key=fine_grained_action_localization_2016, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  13%|█▎        | 117/868 [00:35<08:29,  1.48it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2016.mp4: [05:16:54] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2016.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2032
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2038
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2044
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2052
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2081
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2092
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2098
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2136
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2154
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2164
+[INFO] Processing 381 / 2602 — q_key=fine_grained_action_localization_2182, video_id=P02-20240211-141313
+
+Evaluating shard 0/3:  15%|█▍        | 128/868 [00:38<06:33,  1.88it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2182.mp4: [05:16:57] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2182.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Processing 384 / 2602 — q_key=fine_grained_action_localization_2193, video_id=P02-20240211-141313
+
+Evaluating shard 0/3:  15%|█▍        | 129/868 [00:40<07:30,  1.64it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2193.mp4: [05:16:59] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2193.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Processing 387 / 2602 — q_key=fine_grained_action_localization_2205, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  15%|█▍        | 130/868 [00:42<08:27,  1.45it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2205.mp4: [05:17:01] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2205.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2233
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2241
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2278
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2292
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2332
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2343
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2355
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2378
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2408
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2419
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2436
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2442
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2457
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2478
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2484
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2494
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2502
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2516
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2555
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2563
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2581
+[INFO] Processing 453 / 2602 — q_key=fine_grained_action_localization_2593, video_id=P02-20240211-141313
+
+Evaluating shard 0/3:  18%|█▊        | 152/868 [00:56<07:47,  1.53it/s][INFO] Loaded frames for fine_grained_action_localization_2593 in 3.12s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2644
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2656
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2677
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2685
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2706
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2733
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2751
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2783
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2796
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2814
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2827
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2837
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2873
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2925
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2928
+[INFO] Processing 501 / 2602 — q_key=fine_grained_action_localization_2939, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  19%|█▉        | 168/868 [00:58<05:05,  2.29it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2939.mp4: [05:17:17] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_2939.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2950
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2987
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_2998
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3013
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3047
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3068
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3079
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3087
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3111
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3127
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3147
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3181
+[INFO] Processing 540 / 2602 — q_key=fine_grained_action_localization_3192, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  21%|██        | 181/868 [00:59<03:55,  2.92it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_3192.mp4: [05:17:19] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_3192.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3221
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3238
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3273
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3304
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3323
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3354
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3362
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3390
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3398
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3411
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3418
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3424
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3444
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3454
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3469
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3482
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3499
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3519
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3554
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3574
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3610
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3626
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3635
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3642
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3663
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3666
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3682
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3706
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3718
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3755
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3793
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3807
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3821
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3829
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3839
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3871
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3886
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3906
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3926
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3946
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3952
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3956
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3966
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3989
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_3995
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4025
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4065
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4082
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4095
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4137
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4154
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4164
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4202
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4241
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4265
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4292
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4303
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4322
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4339
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4346
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4365
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4377
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4402
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4418
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4438
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4472
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4476
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4509
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4535
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4564
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4573
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4601
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4624
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4647
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4657
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4688
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4718
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4729
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4752
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4769
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4779
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4835
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4863
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4907
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4922
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4935
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4961
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4974
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_4986
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5010
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5024
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5048
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5064
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5085
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5097
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5119
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5142
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5157
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5165
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5181
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5206
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5230
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5256
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5261
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5272
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5284
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5295
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5310
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5351
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5396
+[INFO] Processing 873 / 2602 — q_key=fine_grained_action_localization_5405, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  34%|███▎      | 292/868 [01:12<01:30,  6.34it/s][INFO] Loaded frames for fine_grained_action_localization_5405 in 2.42s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5423
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5452
+[INFO] Processing 882 / 2602 — q_key=fine_grained_action_localization_5473, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  34%|███▍      | 295/868 [01:13<01:33,  6.16it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5473.mp4: [05:17:32] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5473.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5495
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5536
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5552
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5599
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5610
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5652
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5674
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5691
+[INFO] Processing 909 / 2602 — q_key=fine_grained_action_localization_5709, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  35%|███▌      | 304/868 [01:25<02:52,  3.28it/s][INFO] Loaded frames for fine_grained_action_localization_5709 in 2.55s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5724
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5749
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5770
+[INFO] Processing 921 / 2602 — q_key=fine_grained_action_localization_5789, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  35%|███▌      | 308/868 [01:27<02:55,  3.18it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5789.mp4: [05:17:46] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5789.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5798
+[INFO] Processing 927 / 2602 — q_key=fine_grained_action_localization_5817, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  36%|███▌      | 310/868 [01:29<03:07,  2.98it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5817.mp4: [05:17:48] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5817.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5824
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5851
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5865
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5885
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5895
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5920
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5934
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_5948
+[INFO] Processing 954 / 2602 — q_key=fine_grained_action_localization_5964, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  37%|███▋      | 319/868 [01:30<02:41,  3.41it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5964.mp4: [05:17:49] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_5964.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6000
+[INFO] Processing 960 / 2602 — q_key=fine_grained_action_localization_6024, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  37%|███▋      | 321/868 [01:31<02:54,  3.13it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6024.mp4: [05:17:51] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6024.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6035
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6050
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6055
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6076
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6087
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6121
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6165
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6182
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6203
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6211
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6245
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6259
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6300
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6324
+[INFO] Processing 1005 / 2602 — q_key=fine_grained_action_localization_6345, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  39%|███▊      | 336/868 [01:33<01:54,  4.64it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6345.mp4: [05:17:52] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6345.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6380
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6423
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6447
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6468
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6503
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6537
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6547
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6557
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6574
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6592
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6609
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6620
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6640
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6652
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6661
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6666
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6698
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6718
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6731
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6752
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6785
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6804
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6822
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6841
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6851
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6870
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6883
+[INFO] Processing 1089 / 2602 — q_key=fine_grained_action_localization_6901, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  42%|████▏     | 364/868 [01:34<01:02,  8.12it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6901.mp4: [05:17:53] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_6901.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6925
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6942
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6961
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6977
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_6986
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7023
+[INFO] Processing 1110 / 2602 — q_key=fine_grained_action_localization_7062, video_id=P02-20240211-141313
+
+Evaluating shard 0/3:  43%|████▎     | 371/868 [01:45<03:00,  2.76it/s][INFO] Loaded frames for fine_grained_action_localization_7062 in 2.31s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7089
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7130
+[INFO] Processing 1119 / 2602 — q_key=fine_grained_action_localization_7180, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  43%|████▎     | 374/868 [01:46<03:02,  2.71it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7180.mp4: [05:18:06] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7180.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7228
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7255
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7278
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7319
+[INFO] Processing 1134 / 2602 — q_key=fine_grained_action_localization_7403, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  44%|████▎     | 379/868 [01:47<02:46,  2.94it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7403.mp4: [05:18:07] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7403.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7410
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7428
+[INFO] Processing 1143 / 2602 — q_key=fine_grained_action_localization_7472, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  44%|████▍     | 382/868 [01:48<02:46,  2.92it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7472.mp4: [05:18:08] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7472.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Processing 1146 / 2602 — q_key=fine_grained_action_localization_7501, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  44%|████▍     | 383/868 [01:49<03:04,  2.63it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7501.mp4: [05:18:09] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7501.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7544
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7557
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7577
+[INFO] Processing 1158 / 2602 — q_key=fine_grained_action_localization_7595, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  45%|████▍     | 387/868 [01:51<03:04,  2.61it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7595.mp4: [05:18:10] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7595.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7653
+[INFO] Processing 1164 / 2602 — q_key=fine_grained_action_localization_7722, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  45%|████▍     | 389/868 [01:52<03:23,  2.35it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7722.mp4: [05:18:12] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7722.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7765
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7799
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7808
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7855
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7877
+[INFO] Processing 1182 / 2602 — q_key=fine_grained_action_localization_7914, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  46%|████▌     | 395/868 [01:53<02:32,  3.11it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7914.mp4: [05:18:12] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_7914.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7928
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7938
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7950
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7965
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_7992
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8005
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8047
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8087
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8108
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8124
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8166
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8187
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8199
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8215
+[INFO] Processing 1227 / 2602 — q_key=fine_grained_action_localization_8242, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  47%|████▋     | 410/868 [01:55<01:22,  5.53it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8242.mp4: [05:18:14] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8242.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8286
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8311
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8358
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8374
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8382
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8443
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8472
+[INFO] Processing 1251 / 2602 — q_key=fine_grained_action_localization_8495, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  48%|████▊     | 418/868 [01:56<01:15,  6.00it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8495.mp4: [05:18:15] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8495.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8515
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8531
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8575
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8604
+[INFO] Processing 1266 / 2602 — q_key=fine_grained_action_localization_8636, video_id=P02-20240211-141313
+
+Evaluating shard 0/3:  49%|████▊     | 423/868 [01:57<01:28,  5.05it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8636.mp4: [05:18:16] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8636.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8698
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8728
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8755
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8774
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8820
+[INFO] Processing 1284 / 2602 — q_key=fine_grained_action_localization_8845, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  49%|████▉     | 429/868 [01:58<01:24,  5.19it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8845.mp4: [05:18:17] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_8845.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Processing 1287 / 2602 — q_key=fine_grained_action_localization_8869, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  50%|████▉     | 430/868 [02:09<06:12,  1.18it/s][INFO] Loaded frames for fine_grained_action_localization_8869 in 1.97s
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8892
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8905
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8953
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_8982
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9007
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9027
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9061
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9068
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9111
+[INFO] Processing 1317 / 2602 — q_key=fine_grained_action_localization_9177, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  51%|█████     | 440/868 [02:11<03:41,  1.93it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9177.mp4: [05:18:30] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9177.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9213
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9289
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9320
+[INFO] Processing 1329 / 2602 — q_key=fine_grained_action_localization_9334, video_id=P02-20240211-120927
+
+Evaluating shard 0/3:  51%|█████     | 444/868 [02:12<03:19,  2.12it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9334.mp4: [05:18:31] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9334.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9388
+[INFO] Processing 1335 / 2602 — q_key=fine_grained_action_localization_9450, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  51%|█████▏    | 446/868 [02:13<03:34,  1.96it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9450.mp4: [05:18:33] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9450.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9464
+[INFO] Processing 1341 / 2602 — q_key=fine_grained_action_localization_9478, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  52%|█████▏    | 448/868 [02:15<03:51,  1.81it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9478.mp4: [05:18:34] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9478.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9498
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9535
+[INFO] Processing 1350 / 2602 — q_key=fine_grained_action_localization_9553, video_id=P02-20240211-111822
+
+Evaluating shard 0/3:  52%|█████▏    | 451/868 [02:16<03:47,  1.84it/s][ERROR] Failed to read video /content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9553.mp4: [05:18:36] /github/workspace/src/video/video_reader.cc:444: [/content/drive/MyDrive/381V final project/eval data/trimmed_clips/fine_grained_action_localization_9553.mp4]Unable to handle EOF because it takes too long to retrieve last few frames and `DECORD_EOF_RETRY_MAX=10240`. You may override the limit by `export DECORD_EOF_RETRY_MAX=20480` for example to allow more EOF retry attempts, exit...
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9577
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9606
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9640
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9664
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9685
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9747
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9793
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9834
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9871
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9888
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9905
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9915
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9935
+[INFO] Skipping already-processed question_id: fine_grained_action_localization_9965
+[INFO] Skipping already-processed question_id: fine_grained_action_recognition_33
+[INFO] Skipping already-processed question_id: fine_grained_action_recognition_60
+[INFO] Processing 1401 / 2602 — q_key=fine_grained_action_recognition_174, video_id=P02-20240211-111822
