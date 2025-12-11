@@ -11,7 +11,13 @@ Both views are resized to the same resolution, interleaved in time, and processe
 
 ---
 
-## Method Overview
+### Project Report
+
+Our full project report is [here](https://drive.google.com/file/d/1bdpTyRIiX8r-vBJXNJXRbFse1C9I2puw/view?usp=sharing).
+
+---
+
+### Method Overview
 
 - Backbone: **Qwen3-4B-VL**
 - Trainable components: **vision projector (~20M parameters)**
@@ -19,7 +25,7 @@ Both views are resized to the same resolution, interleaved in time, and processe
 - Training: projector-only finetuning for 1 epoch on 2,447 QA pairs
 ---
 
-## Zero-Shot Results on HD-EPIC (Qwen3-4B-VL)
+### Zero-Shot Results on HD-EPIC (Qwen3-4B-VL)
 
 | Method                                         | Vision Tokens | HD-EPIC Accuracy (%) | Inference Time (s) |
 |-----------------------------------------------|---------------|----------------------|--------------------|
@@ -34,7 +40,7 @@ Our dual-view configuration offers better accuracy than all single-view 256 base
 
 ---
 
-## Finetuning Summary
+### Finetuning Summary
 
 After one epoch of projector-only finetuning:
 
