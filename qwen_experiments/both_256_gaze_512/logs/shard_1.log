@@ -1,0 +1,94 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.06it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.19it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.17it/s]
+output_loading_info {'missing_keys': [], 'unexpected_keys': [], 'mismatched_keys': [], 'error_msgs': []}
+{'': 'cuda'}
+CUDA available: True
+First param device: cuda:0
+Evaluating shard 1/3:   0%|          | 0/81 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluating shard 1/3:   1%|          | 1/81 [00:07<09:37,  7.22s/it]Evaluating shard 1/3:   4%|▎         | 3/81 [00:14<05:47,  4.46s/it]Evaluating shard 1/3:   5%|▍         | 4/81 [00:21<06:48,  5.30s/it]Evaluating shard 1/3:   9%|▊         | 7/81 [00:28<04:22,  3.55s/it]Evaluating shard 1/3:  12%|█▏        | 10/81 [00:35<03:32,  2.99s/it]Evaluating shard 1/3:  14%|█▎        | 11/81 [00:42<04:18,  3.70s/it]Evaluating shard 1/3:  15%|█▍        | 12/81 [00:49<05:00,  4.36s/it]Evaluating shard 1/3:  17%|█▋        | 14/81 [00:56<04:30,  4.03s/it]Evaluating shard 1/3:  19%|█▊        | 15/81 [01:03<05:07,  4.65s/it]Evaluating shard 1/3:  20%|█▉        | 16/81 [01:09<05:36,  5.18s/it]Evaluating shard 1/3:  22%|██▏       | 18/81 [01:16<04:43,  4.51s/it]Evaluating shard 1/3:  23%|██▎       | 19/81 [01:23<05:13,  5.05s/it]Evaluating shard 1/3:  27%|██▋       | 22/81 [01:30<03:39,  3.72s/it]Evaluating shard 1/3:  30%|██▉       | 24/81 [01:37<03:28,  3.66s/it]Evaluating shard 1/3:  31%|███       | 25/81 [01:44<03:58,  4.27s/it]Evaluating shard 1/3:  32%|███▏      | 26/81 [01:51<04:24,  4.81s/it]Evaluating shard 1/3:  33%|███▎      | 27/81 [01:58<04:46,  5.30s/it]Evaluating shard 1/3:  36%|███▌      | 29/81 [02:05<03:58,  4.59s/it]Evaluating shard 1/3:  37%|███▋      | 30/81 [02:12<04:21,  5.13s/it]Evaluating shard 1/3:  38%|███▊      | 31/81 [02:19<04:38,  5.57s/it]Evaluating shard 1/3:  40%|███▉      | 32/81 [02:26<04:49,  5.91s/it]Evaluating shard 1/3:  44%|████▍     | 36/81 [02:33<02:34,  3.43s/it]Evaluating shard 1/3:  46%|████▌     | 37/81 [02:40<02:57,  4.04s/it]Evaluating shard 1/3:  48%|████▊     | 39/81 [02:47<02:42,  3.86s/it]Evaluating shard 1/3:  49%|████▉     | 40/81 [02:54<03:03,  4.47s/it]Evaluating shard 1/3:  54%|█████▍    | 44/81 [03:01<01:53,  3.06s/it]Evaluating shard 1/3:  57%|█████▋    | 46/81 [03:08<01:51,  3.18s/it]Evaluating shard 1/3:  58%|█████▊    | 47/81 [03:15<02:09,  3.81s/it]Evaluating shard 1/3:  59%|█████▉    | 48/81 [03:22<02:26,  4.44s/it]Evaluating shard 1/3:  60%|██████    | 49/81 [03:29<02:39,  4.97s/it]Evaluating shard 1/3:  62%|██████▏   | 50/81 [03:36<02:48,  5.43s/it]Evaluating shard 1/3:  63%|██████▎   | 51/81 [03:43<02:54,  5.82s/it]Evaluating shard 1/3:  64%|██████▍   | 52/81 [03:50<02:57,  6.13s/it]Evaluating shard 1/3:  65%|██████▌   | 53/81 [03:57<02:57,  6.35s/it]Evaluating shard 1/3:  67%|██████▋   | 54/81 [04:04<02:56,  6.53s/it]Evaluating shard 1/3:  68%|██████▊   | 55/81 [04:11<02:53,  6.66s/it]Evaluating shard 1/3:  69%|██████▉   | 56/81 [04:18<02:48,  6.75s/it]Evaluating shard 1/3:  70%|███████   | 57/81 [04:25<02:43,  6.80s/it]Evaluating shard 1/3:  72%|███████▏  | 58/81 [04:32<02:38,  6.88s/it]Evaluating shard 1/3:  73%|███████▎  | 59/81 [04:39<02:31,  6.91s/it]Evaluating shard 1/3:  74%|███████▍  | 60/81 [04:46<02:25,  6.93s/it]Evaluating shard 1/3:  75%|███████▌  | 61/81 [04:53<02:19,  6.98s/it]Evaluating shard 1/3:  77%|███████▋  | 62/81 [05:00<02:13,  7.02s/it]Evaluating shard 1/3:  78%|███████▊  | 63/81 [05:07<02:07,  7.06s/it]Evaluating shard 1/3:  79%|███████▉  | 64/81 [05:14<01:59,  7.04s/it]Evaluating shard 1/3:  80%|████████  | 65/81 [05:21<01:52,  7.03s/it]Evaluating shard 1/3:  81%|████████▏ | 66/81 [05:28<01:44,  7.00s/it]Evaluating shard 1/3:  83%|████████▎ | 67/81 [05:35<01:38,  7.02s/it]Evaluating shard 1/3:  84%|████████▍ | 68/81 [05:43<01:31,  7.07s/it]Evaluating shard 1/3:  85%|████████▌ | 69/81 [05:50<01:25,  7.12s/it]Evaluating shard 1/3:  86%|████████▋ | 70/81 [05:57<01:18,  7.11s/it]Evaluating shard 1/3:  88%|████████▊ | 71/81 [06:04<01:10,  7.08s/it]Evaluating shard 1/3:  89%|████████▉ | 72/81 [06:11<01:03,  7.05s/it]Evaluating shard 1/3:  90%|█████████ | 73/81 [06:18<00:56,  7.02s/it]Evaluating shard 1/3:  91%|█████████▏| 74/81 [06:25<00:48,  6.99s/it]Evaluating shard 1/3:  93%|█████████▎| 75/81 [06:32<00:42,  7.00s/it]Evaluating shard 1/3:  94%|█████████▍| 76/81 [06:39<00:35,  7.01s/it]Evaluating shard 1/3:  95%|█████████▌| 77/81 [06:46<00:27,  6.97s/it]Evaluating shard 1/3:  96%|█████████▋| 78/81 [06:53<00:21,  7.01s/it]Evaluating shard 1/3:  98%|█████████▊| 79/81 [07:00<00:14,  7.01s/it]Evaluating shard 1/3:  99%|█████████▉| 80/81 [07:07<00:07,  7.02s/it]Evaluating shard 1/3: 100%|██████████| 81/81 [07:14<00:00,  7.00s/it]Evaluating shard 1/3: 100%|██████████| 81/81 [07:14<00:00,  5.36s/it]
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_localization_35: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_35.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_localization_77: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_77.mp4, skipping.
+[WARN] Video file not found for fine_grained_action_localization_82: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_82.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_localization_105: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_105.mp4, skipping.
+[WARN] Video file not found for fine_grained_action_localization_108: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_108.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_localization_187: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_187.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_localization_254: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_localization_254.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_recognition_49: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_recognition_49.mp4, skipping.
+[WARN] Video file not found for fine_grained_action_recognition_115: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_recognition_115.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_action_recognition_221: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_action_recognition_221.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_how_recognition_34: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_how_recognition_34.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_why_recognition_2: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_2.mp4, skipping.
+[WARN] Video file not found for fine_grained_why_recognition_39: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_39.mp4, skipping.
+[WARN] Video file not found for fine_grained_why_recognition_51: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_51.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_why_recognition_159: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_159.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_why_recognition_254: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_254.mp4, skipping.
+[WARN] Video file not found for fine_grained_why_recognition_278: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_278.mp4, skipping.
+[WARN] Video file not found for fine_grained_why_recognition_307: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_307.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+[WARN] Video file not found for fine_grained_why_recognition_400: /home/aryan/ami/381V-final/data/both_256_with_gaze_512/fine_grained_why_recognition_400.mp4, skipping.
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+video_grid_thw: tensor([[ 4, 16, 16]])
+
+=== Evaluation summary ===
+Evaluated examples: 62
+Correct: 16
+Accuracy: 0.2581
